@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Sürücü Kursu Ehliyet Uygulaması | Nurettin Mustafa Özkaya</title>
+  <meta name="description" content="Flutter ve Laravel ile geliştirilen Sinema Otomasyonu uygulaması; film listeleme, bilet alma, seans takibi ve kullanıcı yönetimi gibi özellikler sunar. Kullanıcı dostu arayüz ve sağlam API mimarisi ile dijital sinema deneyimi." />
+
+  <meta name="keywords" content="Sinema Otomasyonu, Flutter, Laravel, Mobil Uygulama, Bilet Satışı, Seans Takibi, Kullanıcı Girişi, Film Listesi, Mobil Proje, MySQL, Dart, API Entegrasyonu, UX UI Tasarım" />
+
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+  <style>
+    .portfolio-details .portfolio-details-media .main-image {
+      min-height: unset !important;
+      height: auto !important;
+      max-height: 70vw;
+      overflow: visible !important;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    /* Nav social focus jitter fix */
+    #navmenu .social-links a { display:inline-flex; align-items:center; justify-content:center; }
+    #navmenu .social-links a:focus { outline: none; }
+    #navmenu .social-links a:active { transform:none !important; }
+    .portfolio-details .portfolio-details-media .main-image .swiper-slide,
+    .slider-img-blur-bg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: auto !important;
+      background: transparent;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .portfolio-details .portfolio-details-media .main-image img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      /* show full image without limiting height */
+      max-height: none;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      background: transparent;
+      box-shadow: none;
+      border-radius: 12px;
+    }
+    .portfolio-details .thumbnail-grid img {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+      background: #fff;
+      display: block;
+    }
+    .portfolio-details .portfolio-details-media .main-image .swiper-slide img.portrait {
+      /* keep original proportions, no forced height */
+      height: auto;
+      width: auto;
+      max-width: 100%;
+    }
+    .portfolio-details .portfolio-details-media .main-image .swiper-slide img.landscape {
+      width: 100%;
+      height: auto;
+    }
+    .portfolio-details .thumbnail-grid img.portrait {
+      width: auto;
+      height: 100%;
+      max-height: 120px;
+    }
+    .portfolio-details .thumbnail-grid img.landscape {
+      width: 100%;
+      height: auto;
+      max-height: 120px;
+    }
+    @media (max-width: 991.98px) {
+      .portfolio-details .portfolio-details-media .main-image {
+        height: auto !important;
+        min-height: unset !important;
+      }
+    }
+    @media (max-width: 575.98px) {
+      .portfolio-details .portfolio-details-media .main-image {
+        height: auto !important;
+        min-height: unset !important;
+      }
+    }
+  </style>
+  <!-- =======================================================
+  * Template Name: Style
+  * Template URL: https://bootstrapmade.com/style-bootstrap-portfolio-template/
+  * Updated: Jul 02 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-details-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <!-- Uncomment the line below if you also wish to use an text logo -->
+        <!-- <h1 class="sitename">Style</h1>  -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <div class="profile-img">
+          <img src="assets/img/profile/profile-picture.jpg" alt="" class="img-fluid rounded-circle" />
+        </div>
+
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <h1 class="sitename">Nurettin Mustafa Özkaya</h1>
+        </a>
+
+        <div class="social-links text-center">
+          <a href="https://github.com/nmustafaozkaya" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+          <a href="https://x.com/mustafaozk_" class="twitter" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.instagram.com/mustafaaozk_/" class="instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/mustafaaozk/" class="linkedin" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+          <a href="https://linktr.ee/mustafaaozk" target="_blank" rel="noopener" class="linktree"><i class="bi bi-link-45deg"></i></a>
+        </div>
+
+        <ul>
+          <li><a href="index.html#hero">Ana Sayfa</a></li>
+          <li><a href="index.html#about">Hakkımda</a></li>
+          <li><a href="index.html#resume">Özgeçmiş</a></li>
+          <li><a href="index.html#skills">Yeteneklerim</a></li>
+          <li><a href="index.html#services">Hizmetlerim</a></li>
+          <li><a href="index.html#portfolio">Portföy</a></li>
+          <li><a href="index.html#contact">İletişim</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Portföy Detayları</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li class="current">Portföy Detayları</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="portfolio-details-media">
+              <div class="main-image">
+                <div class="portfolio-details-slider swiper init-swiper" data-aos="zoom-in">
+                  <script type="application/json" class="swiper-config">
+                    {
+                      "loop": true,
+                      "speed": 1000,
+                      "autoplay": {
+                        "delay": 6000
+                      },
+                      "effect": "creative",
+                      "creativeEffect": {
+                        "prev": {
+                          "shadow": true,
+                          "translate": [0, 0, -400]
+                        },
+                        "next": {
+                          "translate": ["100%", 0, 0]
+                        }
+                      },
+                      "slidesPerView": 1,
+                      "autoHeight": true,
+                      "navigation": {
+                        "nextEl": ".swiper-button-next",
+                        "prevEl": ".swiper-button-prev"
+                      }
+                    }
+                  </script>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="slider-img-blur-bg">
+                        <div class="blur-bg" style="background-image:url('assets/img/portfolio/proje5/dl1.jpeg');"></div>
+                        <img src="assets/img/portfolio/proje5/dl1.jpeg" alt="Portfolio Image" class="img-fluid portrait" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slider-img-blur-bg">
+                        <div class="blur-bg" style="background-image:url('assets/img/portfolio/proje5/dl2.jpeg');"></div>
+                        <img src="assets/img/portfolio/proje5/dl2.jpeg" alt="Portfolio Image" class="img-fluid portrait" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slider-img-blur-bg">
+                        <div class="blur-bg" style="background-image:url('assets/img/portfolio/proje5/dl3.jpeg');"></div>
+                        <img src="assets/img/portfolio/proje5/dl3.jpeg" alt="Portfolio Image" class="img-fluid portrait" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/proje5/dl4.png" alt="Portfolio Image" class="img-fluid landscape" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/proje5/dl5.png" alt="Portfolio Image" class="img-fluid landscape" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/proje5/dl6.png" alt="Portfolio Image" class="img-fluid landscape" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/proje5/dl7.png" alt="Portfolio Image" class="img-fluid landscape" />
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+
+              <div class="thumbnail-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="row g-2 mt-3">
+                  <div class="col-3">
+                    <img src="assets/img/portfolio/proje5/dl1.jpeg" alt="Gallery Image" class="img-fluid glightbox portrait" />
+                  </div>
+                  <div class="col-3">
+                    <img src="assets/img/portfolio/proje5/dl2.jpeg" alt="Gallery Image" class="img-fluid glightbox portrait" />
+                  </div>
+                  <div class="col-3">
+                    <img src="assets/img/portfolio/proje5/dl3.jpeg" alt="Gallery Image" class="img-fluid glightbox portrait" />
+                  </div>
+                  <div class="col-3">
+                    <img src="assets/img/portfolio/proje5/dl4.png" alt="Gallery Image" class="img-fluid glightbox landscape" />
+                  </div>
+                  <div class="col-3">
+                    <img src="assets/img/portfolio/proje5/dl5.png" alt="Gallery Image" class="img-fluid glightbox landscape" />
+                  </div>
+                  <div class="col-3">
+                    <img src="assets/img/portfolio/proje5/dl6.png" alt="Gallery Image" class="img-fluid glightbox landscape" />
+                  </div>
+                  <div class="col-3">
+                    <img src="assets/img/portfolio/proje5/dl7.png" alt="Gallery Image" class="img-fluid glightbox landscape" />
+                  </div>
+                </div>
+
+                <br />
+              </div>
+
+              <div class="tech-stack-badges" data-aos="fade-up" data-aos-delay="300">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Firebase</span>
+                <span>Mobile Application</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="portfolio-details-content">
+              <div class="project-meta">
+                <div class="badge-wrapper">
+                  <span class="project-badge">UX/UI Tasarımı</span>
+                </div>
+                <div class="date-client">
+                  <div class="meta-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span>Agustos-Ekim 2025</span>
+                  </div>
+                  <div class="meta-item">
+                    <i class="bi bi-buildings"></i>
+                    <span>Freelancer</span>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="project-title">Sürücü Kursu Ehliyet Uygulaması<br>
+                <span style="font-size:1rem;font-weight:400;display:block;margin-top:8px;">FULL-STACK MOBİL UYGULAMA GELİŞTİRİCİSİ (SERBEST ÇALIŞAN)</span>
+              </h2>
+              <div class="project-overview">
+                <p class="lead">
+                  <strong>4 Mevsim Sürücü Kursu</strong><br>
+                  Bir sürücü kursu için Flutter ve Firebase ile mobil uygulama geliştirerek, öğrencilerin sınav sorularına erişmelerini, kurs programını takip etmelerini ve ilerlemelerini anlık olarak izlemelerini sağlayan modern bir çözüm sundum. <br><br>
+                  <span style="display:block;font-weight:600;color:#30539b;margin-bottom:5px;letter-spacing:.5px;font-size:17px;">Görev ve Sorumluluklar</span>
+                  Proje kapsamında; <strong>Flutter</strong> ve <strong>Firebase</strong> kullanarak çapraz platform mobil uygulama geliştirdim, <strong>Firestore</strong> ile gerçek zamanlı veri senkronizasyonunu ve <strong>Cloud Messaging</strong> ile anlık bildirim sistemini başarılı şekilde entegre ettim. <strong>Python (PyQt)</strong> ile tasarladığım masaüstü yönetim paneliyle içerik yönetimini kolaylaştırarak, müşterinin Firebase üzerinde sınav sorularını zahmetsizce yüklemesini, silmesini ve güncellemesini sağladım. Kullanıcı dostu ve sezgisel arayüzler, hızlı erişilebilen menüler ve modern UX tasarımı ile öğrenci deneyimini optimize ettim. Müşteriden gelen geribildirimlerle devamlı olarak iyileştirme, hata giderme ve bakım süreçlerini iteratif olarak yürüttüm.
+                  <br><br>
+                  <span style="font-weight:500;color:#30539b;">Kullanılan Teknolojiler:</span><br>
+                  <b>Mobil:</b> Flutter, Dart, Firebase (Firestore, Cloud Messaging, Storage)<br>
+                  <b>Masaüstü Panel:</b> Python, PyQt, Firebase Admin SDK<br>
+                  <b>Diğer:</b> Git, REST API
+                </p>
+                <div class="project-features" data-aos="fade-up" data-aos-delay="300">
+                  <h3><i class="bi bi-stars"></i>Anahtar Özellikler</h3>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <ul class="feature-list">
+                        <li>
+                          <i class="bi bi-check2-circle"></i> Güvenli kimlik doğrulama: giriş, kayıt ve çıkış işlemleri.
+                        </li>
+                        <li>
+                          <i class="bi bi-check2-circle"></i> Geniş soru bankası: konu, zorluk ve etiketlere göre filtreleme.
+                        </li>
+                        <li>
+                          <i class="bi bi-check2-circle"></i> Gerçek sınav deneyimi: süreli deneme ve sonuç analizi.
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="feature-list">
+                        <li>
+                          <i class="bi bi-check2-circle"></i> Ders programı ve duyurular için anlık bildirim (FCM).
+                        </li>
+                        <li>
+                          <i class="bi bi-check2-circle"></i> İlerleme takibi: doğru/yanlış istatistikleri ve hedefler.
+                        </li>
+                        <li>
+                          <i class="bi bi-check2-circle"></i> Yönetim paneli ile içerik yönetimi (soru ekle/sil/güncelle).
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
+                  <a href="https://play.google.com/store/apps/details?id=com.trafikkocu.app" target="_blank" rel="noopener" class="btn btn-primary me-2"><i class="bi bi-google-play"></i> Google Play</a>
+                  <a href="portfolio-details-cinema-automation.html" class="btn-next-project">Sonraki Proje <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- /Portfolio Details Section -->
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Nurettin Mustafa Özkaya</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://x.com/mustafaozk_" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.instagram.com/mustafaaozk_/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/mustafaaozk/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://linktr.ee/mustafaaozk" target="_blank" class="linktree"><i class="bi bi-link-45deg"></i></a>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
